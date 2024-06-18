@@ -20,6 +20,14 @@ public class EnemyBase extends Enemy{
 		{
 			GameWorld.enemies.add(new RandomEnemy(x,y,0,1));
 		}
+		if (Math.random()<0.05) 
+		{
+			GameWorld.enemies.add(new DropEnemy(x,y,0,1));
+		}
+		if (Math.random()<0.05) 
+		{
+			GameWorld.enemies.add(new CurveEnemy(x,y,0,2));
+		}
 		
 	}
 	public void draw(MyFrame f){
@@ -27,5 +35,6 @@ public class EnemyBase extends Enemy{
 		f.fillOval(x, y, 32, 32);
 		f.setColor(200, 200, 200);
 		f.fillOval(x-16, y+8, 64, 16);
+		
 	}
 }

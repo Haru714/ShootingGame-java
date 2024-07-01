@@ -18,7 +18,7 @@ public class GameFrame extends MyFrame
 		{
 			clear();
 			drawString("Stage = "+GameWorld.stage,300,50,15);
-			drawString("Stage = "+GameWorld.stage,300,80,15);
+			drawString("Score = "+GameWorld.score,300,80,15);
 			GameWorld.player.draw(this);
 			GameWorld.player.move();
 			movePlayerBullets();
@@ -118,7 +118,7 @@ public class GameFrame extends MyFrame
 						e.life--;
 					}
 					if (e.life<=0) {
-						GameWorld.score+=e.score;
+						GameWorld.score+=e.score;                 
 						GameWorld.score++;
 						GameWorld.enemies.remove(j);
 					}
